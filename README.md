@@ -7,4 +7,4 @@ violet
 purple
 indigo
 blue
-
+all the colors of the rainbow
