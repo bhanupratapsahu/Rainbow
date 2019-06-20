@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.casio.calc.Addition","l":"Addition"},{"p":"com.casio.calc.Addition","l":"App"}]
