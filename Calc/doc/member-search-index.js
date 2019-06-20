@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.atmecs.calc","c":"Addition","l":"Addition()"},{"p":"com.atmecs.calc","c":"Addition","l":"additionOfNumbers(int...)"}]
