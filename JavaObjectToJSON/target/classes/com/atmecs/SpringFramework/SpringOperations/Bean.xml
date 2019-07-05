@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+ 
+ <bean id="address" class="com.atmecs.SpringFramework.SpringOperations.Adderss" >
+
+<constructor-arg value="Hyderabad" ></constructor-arg>  
+<constructor-arg value="Telangna"></constructor-arg> 
+<constructor-arg value="India"></constructor-arg> 
+</bean>  
+
+ <bean id="qualification" class="com.atmecs.SpringFramework.SpringOperations.Qualifications" >
+
+<constructor-arg index="0" value="B-Tech" ></constructor-arg>  
+<constructor-arg index="1" value="Electrical and Electronics engineering"></constructor-arg> 
+<constructor-arg index="2" value="2018" type="int"></constructor-arg> 
+<constructor-arg index="3"  value="8.5" type= "double"></constructor-arg>
+</bean> 
+
+
+  
+<bean id="employeedata" class="com.atmecs.SpringFramework.SpringOperations.Employee" init-method= "init" destroy-method= "destroy">  
+
+<constructor-arg value="Sachin Singh"    ></constructor-arg>  
+<constructor-arg value="10"></constructor-arg> 
+<constructor-arg><ref bean= "address"/></constructor-arg>
+
+<constructor-arg>
+<list>
+<value>Core Java</value>
+<value>Build tool Maven</value>
+<value>Basics of SpringFramework</value>
+<value>Mysql Basics</value>
+</list>
+</constructor-arg>
+
+<constructor-arg>
+<list>
+<ref bean= "qualification"/>
+
+</list>
+</constructor-arg>
+</bean>  
+
+  
+  <!-- <bean id="employee" class="com.atmecs.SpringFramework.SpringOperations.Employee" >  
+<constructor-arg value="Trainee-Software Engineer" ></constructor-arg> 
+</bean> -->  
+</beans> 
