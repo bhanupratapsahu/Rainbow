@@ -1,0 +1,24 @@
+package com.atmecs.skyscannerTest;
+
+
+
+import com.atmecs.ReadExel.ExelFileConfig;
+import com.atmecs.ReadExel.FileLocations;
+
+public class TestApplication {
+	
+	String url;
+	String userName;
+	String password;
+	
+@org.testng.annotations.Test
+	public void getTestData() {
+		ExelFileConfig filelocation = new ExelFileConfig(FileLocations.filePath);
+		userName= filelocation.getData("dataSheet", 1, 0);
+		password = filelocation.getData("dataSheet", 1, 1);
+	    url = filelocation.getData("dataSheet", 1, 2);
+		System.out.println("url is"+url);
+	}
+		
+
+}

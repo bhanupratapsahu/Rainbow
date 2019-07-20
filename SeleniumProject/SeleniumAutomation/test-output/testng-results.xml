@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-07-18T09:23:06Z" name="Default suite" finished-at="2019-07-18T09:23:19Z" duration-ms="13085">
+  <suite started-at="2019-07-20T10:39:22Z" name="Default suite" finished-at="2019-07-20T10:39:32Z" duration-ms="9424">
     <groups>
     </groups>
-    <test started-at="2019-07-18T09:23:06Z" name="Default test" finished-at="2019-07-18T09:23:19Z" duration-ms="13085">
-      <class name="com.atmecs.restAssured.SeleniumAutomation.DemoTest">
-        <test-method signature="testPurpose()[pri:0, instance:com.atmecs.restAssured.SeleniumAutomation.DemoTest@e4487af]" started-at="2019-07-18T09:23:06Z" name="testPurpose" finished-at="2019-07-18T09:23:19Z" duration-ms="13028" status="FAIL">
+    <test started-at="2019-07-20T10:39:22Z" name="Default test" finished-at="2019-07-20T10:39:32Z" duration-ms="9424">
+      <class name="com.atmecs.skyscannerTest.TestApplication">
+        <test-method signature="getTestData()[pri:0, instance:com.atmecs.skyscannerTest.TestApplication@350ec41e]" started-at="2019-07-20T10:39:22Z" name="getTestData" finished-at="2019-07-20T10:39:22Z" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestData -->
+        <test-method signature="loginTest()[pri:0, instance:com.atmecs.skyscannerTest.TestApplication@350ec41e]" started-at="2019-07-20T10:39:23Z" name="loginTest" finished-at="2019-07-20T10:39:32Z" duration-ms="9332" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element <span class="RveJvd snByac">...</span> is not clickable at point (340, 507). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+              <![CDATA[element click intercepted: Element <span id="authentication-link" class="login">...</span> is not clickable at point (797, 41). Other element would receive the click: <div role="presentation" class="bpk-scrim-1wSr6 undefined"></div>
   (Session info: chrome=75.0.3770.142)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ATMECSINDT-009', ip: '50.50.50.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\SACHIN~1.SIN\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51287}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 19443387f694159cbe83c3c28d67c340]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\SACHIN~1.SIN\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:65442}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 22f22176e5c100d7c1fddd7d42144386]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="RveJvd snByac">...</span> is not clickable at point (340, 507). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span id="authentication-link" class="login">...</span> is not clickable at point (797, 41). Other element would receive the click: <div role="presentation" class="bpk-scrim-1wSr6 undefined"></div>
   (Session info: chrome=75.0.3770.142)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ATMECSINDT-009', ip: '50.50.50.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\SACHIN~1.SIN\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51287}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 19443387f694159cbe83c3c28d67c340
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\SACHIN~1.SIN\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:65442}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 22f22176e5c100d7c1fddd7d42144386
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at com.atmecs.restAssured.SeleniumAutomation.DemoTest.testPurpose(DemoTest.java:22)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at com.atmecs.skyscannerTest.TestApplication.loginTest(TestApplication.java:93)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,8 +73,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPurpose -->
-      </class> <!-- com.atmecs.restAssured.SeleniumAutomation.DemoTest -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- com.atmecs.skyscannerTest.TestApplication -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

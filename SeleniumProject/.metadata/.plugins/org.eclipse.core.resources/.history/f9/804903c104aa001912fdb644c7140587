@@ -1,0 +1,19 @@
+package com.atmecs.SeleniumAutomation.Test;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.atmecs.readTestData.ReadPropertiesfile;
+
+public class TestPropertiesfileData {
+@Test
+	public void getTestData() throws IOException {
+		ReadPropertiesfile file = new ReadPropertiesfile();
+		String userName = file.getData("name");
+		System.out.println(userName);
+	}
+
+}
+

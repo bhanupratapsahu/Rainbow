@@ -1,0 +1,45 @@
+package com.atmecs.restAssured.SeleniumAutomation;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.atmecs.ReadExel.ExelFileConfig;
+import com.atmecs.ReadExel.FileLocations;
+
+public class DemoTest {
+	
+	String Url;
+	
+	@Test
+	public void getTestData() {
+		ExelFileConfig filelocation = new ExelFileConfig(FileLocations.filePath);
+	     Url = filelocation.getData("dataSheet", 1, 2);
+		System.out.println("url is"+Url);
+	}
+		
+	
+	
+	//@Test
+	public void testPurpose() {
+		WebDriver driver = new ChromeDriver();
+	
+		driver.get(Url);
+		
+		/*driver.findElement(By.xpath("//*[@id='identifierId']")).sendKeys("sachin.singh@atmecs.com");
+		driver.findElement(By.xpath("//*[@id='identifierNext']/span")).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.cssSelector("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input")).sendKeys("620011");
+		driver.findElement(By.xpath("//*[@id=\'passwordNext\']/span")).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//span[(text()='Forgot password?')]")).click();
+	    driver.findElement(By.cssSelector("#view_container > div > div > div.pwWryf.bxPAYd > div > div.zQJV3 > div > div.daaWTb > div > span > span"))
+	    .click();*/
+	    driver.close();
+	    
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.atmecs.restAssured.SeleniumAutomation;
+
+import org.testng.annotations.Test;
+
+public class ApplicationFormTest {
+	
+	@Test
+	public void browserInitailze() {
+		System.setProperties("webdriver.gecko.driver","C:\\SeleniumProject\\SeleniumAutomation\\");
+	}
+
+}

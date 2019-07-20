@@ -1,0 +1,87 @@
+package com.atmecs.skyscannerTest;
+
+
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.atmecs.ReadExel.ExelFileConfig;
+import com.atmecs.ReadExel.FileLocations;
+import com.atmecs.readTestData.ReadPropertiesfile;
+
+public class TestApplication extends ReadPropertiesfile {
+	WebDriver driver;
+	static String url;
+	String userName;
+	String password;
+     //  @Test
+	/*public void getTestData() {
+		ExelFileConfig filelocation = new ExelFileConfig(FileLocations.filePath);
+		userName= filelocation.getData("dataSheet", 1, 0);
+		System.out.println(userName);
+		password = filelocation.getData("dataSheet", 1, 1);
+	    url = filelocation.getData("dataSheet", 2, 2);
+		System.out.println("url is"+url);
+	
+	}*/
+       @Test
+   	public void getTestData() throws IOException {
+   	
+   		 userName = getData("userName");
+   		 System.out.println(userName);
+   		 url = getData("url");
+   		
+   		 System.out.println(url);
+   	}
+
+		@Test
+		public void SignUpTest() throws IOException {
+			driver = new ChromeDriver();
+			driver.get(url);
+			driver.get( getData("url"));
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//span[text()='Log in']")).click();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//div[@data-testid='login-email-button']")).click();
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//button[@data-testid='login-signup-toggle-button']")).click();
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+		    driver.findElement(By.xpath("//input[@type='email']")).sendKeys(userName);
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		    driver.findElement(By.xpath("//button[@data-testid='signup-button']")).click();
+		    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		    driver.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
+		    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		    driver.findElement(By.xpath("//button[@data-testid='signup-button']")).click();
+		    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		    driver.findElement(By.xpath("//span[text()='Account']")).click();
+			driver.findElement(By.xpath("//button[text()='Log out']")).click();
+			
+		}
+	
+		
+		//@Test 
+		public void loginTest() {
+		    
+			driver.findElement(By.xpath("//span[text()='Log in']")).click();
+			
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//div[@data-testid='login-email-button']")).click();
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            driver.findElement(By.xpath("//input[@type='email']")).sendKeys(userName);
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
+			driver.findElement(By.xpath("//button[@data-testid='login-button']")).click();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			WebElement element = driver.findElement(By.xpath("//span[text()='Account']"));
+			element.click();
+		}
+
+}

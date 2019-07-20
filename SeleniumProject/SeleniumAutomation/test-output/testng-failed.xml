@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.restAssured.SeleniumAutomation.DemoTest">
+      <class name="com.atmecs.skyscannerTest.TestApplication">
         <methods>
-          <include name="testPurpose"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.atmecs.restAssured.SeleniumAutomation.DemoTest -->
+      </class> <!-- com.atmecs.skyscannerTest.TestApplication -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

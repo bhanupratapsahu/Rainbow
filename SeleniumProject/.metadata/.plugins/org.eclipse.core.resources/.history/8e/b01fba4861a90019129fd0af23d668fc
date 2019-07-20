@@ -1,0 +1,15 @@
+package com.atmecs.ReadExel;
+
+import java.io.File;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+public class ReadExelFile {
+	public static void main(String[] args) {
+		File file = new File(FileLocations.filePath);
+		
+		XSSFWorkbook workBook = new XSSFWorkbook(file);
+	}
+	
+	
+
+}

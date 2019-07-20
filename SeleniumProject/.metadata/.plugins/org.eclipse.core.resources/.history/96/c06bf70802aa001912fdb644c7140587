@@ -1,0 +1,13 @@
+package com.atmecs.readTestData;
+
+import java.io.File;
+import java.util.Properties;
+
+public class ReadpPropertiesfile {
+	
+	Properties properties;
+	public void readData() {
+		File file = new File(System.getProperty("user.dir")+"src\\lib\\test.properties");
+	}
+
+}
